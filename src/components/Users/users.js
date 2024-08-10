@@ -24,6 +24,7 @@ const User = () => {
       dispatch(changeUser({newUser: user}));
       dispatch(userCommentsAsync(user));
       dispatch(userPostAsync(user))
+
       
     } 
 
@@ -31,11 +32,16 @@ const User = () => {
         setUser(e.target.value)
     }
 
+    const handleClick = (e) => {
+        console.log(e.target.querySelector('div.post-body'))
+        e.target.querySelector('div.post-body').classList.toggle('hide-description')
+    }
+
     return (
         <div>
 
             <form onSubmit={handleSubmit}>
-                <label for="reddit-user">Username:</label>
+                <label htmlFor="reddit-user">Username:</label>
                 <input type="text" id="reddit-user" onChange={handleChange} />            
                 <input type="submit" value="Submit"/>
             </form>
@@ -54,9 +60,9 @@ const User = () => {
                 <ul id='posts-list'>
                     {curUserPosts.map((obj) => (
                         <div>
-                            <li className='user-post-title'>
+                            <li className='user-post-title' onClick={handleClick}>
                                 {obj.post_title}                                
-                                <div className='post-body'>{obj.post}</div>
+                                <div className='post-body hide-description'>{obj.post_body}</div>
                             </li>
                         </div>                        
                     ))}

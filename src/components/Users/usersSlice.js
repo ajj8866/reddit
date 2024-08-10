@@ -48,7 +48,7 @@ const userInfo = createSlice( {
             state.isCommentError = false;
             state.isLoadingComments = false;
             const commentArray = action.payload.data.children;
-            console.log(commentArray)
+            // console.log(commentArray)
             commentArray.forEach((obj) => {
                 state.comments.push({
                     'subreddit': obj.data.subreddit,

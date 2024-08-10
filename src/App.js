@@ -5,6 +5,7 @@ function App() {
   return (
     <div>
       <div id='main-nav'>
+        <img id='img-logo' src="/images/reddit-nav.png" alt=''/>
         <h1>
           Reddit Snap-It!
         </h1>
