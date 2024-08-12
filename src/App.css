@@ -1,3 +1,9 @@
+body {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  
+}
 
 div#main-nav {
   display: flex;
@@ -12,6 +18,34 @@ img#img-logo {
   /* height: 100%; */
   width: 20%;
   margin: 20px;
+}
+
+div#user-info-container {
+  display: flex;
+}
+
+li {
+  list-style-type: none;
+}
+
+div#li-comments, div#li-posts {
+  margin: 20px;
+}
+
+ul#comment-list, ul#posts-list {
+  width: 50%;
+  margin: 20px;
+}
+
+li.user-comment {
+  margin-bottom: 5px;
+}
+
+li.reddit-sub {
+  font-family: "Noto Serif", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: italic;
 }
 
 div.post-body {

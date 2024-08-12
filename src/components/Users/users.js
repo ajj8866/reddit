@@ -23,9 +23,7 @@ const User = () => {
       e.preventDefault();
       dispatch(changeUser({newUser: user}));
       dispatch(userCommentsAsync(user));
-      dispatch(userPostAsync(user))
-
-      
+      dispatch(userPostAsync(user))      
     } 
 
     const handleChange = (e) => {
@@ -39,19 +37,18 @@ const User = () => {
 
     return (
         <div>
-
             <form onSubmit={handleSubmit}>
                 <label htmlFor="reddit-user">Username:</label>
                 <input type="text" id="reddit-user" onChange={handleChange} />            
                 <input type="submit" value="Submit"/>
             </form>
-
+            <div  id='user-info-container'>
             {curUserComments.length>0 && (
                 <ul id='comment-list'>
                     {curUserComments.map((obj) => (
-                        <div>
+                        <div id='li-comments'>
                             <li className='user-comment'>{obj.comment}</li>
-                            <li className='reddit-sub'>{obj.subreddit}</li>
+                            <li className='reddit-sub'><a href={`https://www.reddit.com/r/${obj.subreddit}/`}>{obj.subreddit}</a></li>
                         </div>
                     ))}
                 </ul>
@@ -59,7 +56,7 @@ const User = () => {
             {curUserPosts.length>0 && (
                 <ul id='posts-list'>
                     {curUserPosts.map((obj) => (
-                        <div>
+                        <div id='li-posts'>
                             <li className='user-post-title' onClick={handleClick}>
                                 {obj.post_title}                                
                                 <div className='post-body hide-description'>{obj.post_body}</div>
@@ -68,6 +65,7 @@ const User = () => {
                     ))}
                 </ul>                
             )}
+            </div>
             
         </div>
     )
