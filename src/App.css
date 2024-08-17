@@ -5,6 +5,13 @@ body {
   
 }
 
+h1 {
+  font-family: "Noto Serif", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: italic;
+}
+
 div#main-nav {
   display: flex;
   flex-wrap: wrap;
@@ -58,6 +65,11 @@ div[class*='hide-description'] {
   display: none;
 }
 
-li.user-post-title {
-  color: #6597D7;
+/* li.user-post-title {
+  font-size: 0.5em;
+} */
+
+
+div.post-body {
+  font-size: 0.7em;
 }
