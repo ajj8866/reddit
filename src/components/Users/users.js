@@ -37,8 +37,8 @@ const User = () => {
 
     return (
         <div>
-            <form onSubmit={handleSubmit}>
-                <label htmlFor="reddit-user">Username:</label>
+            <form id='init-form' onSubmit={handleSubmit}>
+                <label htmlFor="reddit-user">Username:  </label>
                 <input type="text" id="reddit-user" onChange={handleChange} />            
                 <input type="submit" value="Submit"/>
             </form>

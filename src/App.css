@@ -2,6 +2,7 @@ body {
   font-family: "Roboto", sans-serif;
   font-weight: 400;
   font-style: normal;
+  background-color: #f0b27a;
   
 }
 
@@ -10,6 +11,19 @@ h1 {
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: italic;
+  font-size: 52px;
+}
+
+ul#nav-options {
+  font-size: 1.5em;
+}
+
+form#init-form {
+  text-align: center;
+}
+
+form#init-form > input, form#init-form > label {
+  font-size: 1.5em;
 }
 
 div#main-nav {
@@ -58,7 +72,7 @@ li.reddit-sub {
 div.post-body {
   /* position: absolute;
   top: 100%; */
-  color: blueviolet;
+  color: rgb(42, 97, 170);
 }
 
 div[class*='hide-description'] {

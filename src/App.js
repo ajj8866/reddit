@@ -9,7 +9,7 @@ function App() {
         <h1>
           Reddit Snap-It!
         </h1>
-        <ul>
+        <ul id='nav-options'>
           <li>Popular</li>
           <li>Articles</li>
           <li>User Info</li>
